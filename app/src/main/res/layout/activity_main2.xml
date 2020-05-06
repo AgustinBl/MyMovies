@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    app:cardMaxElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/itemsswipetorefresh1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="149dp"
+            android:layout_height="42dp"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="marquee"
+            android:gravity="center|start"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="8dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvDescription1"
+            app:layout_constraintEnd_toEndOf="@+id/tvDescription1"
+            app:layout_constraintStart_toStartOf="@+id/tvDescription1"
+            tools:text="Título adfdsfhdfhfd" />
+
+        <ImageView
+            android:id="@+id/ivCover1"
+            android:layout_width="200dp"
+            android:layout_height="215dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDescription1"
+            app:layout_constraintEnd_toStartOf="@+id/tvTitle1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle1"
+            tools:ignore="contentDescription"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <View
+            style="@style/Divider"
+            android:layout_width="100dp"
+            android:layout_marginStart="239dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvDescription1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle1" />
+
+        <TextView
+            android:id="@+id/tvDescription1"
+            android:layout_width="168dp"
+            android:layout_height="166dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="7dp"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/colorPrimaryText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivCover1"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle1"
+            tools:text="Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño." />
+
+        <ImageButton
+            android:id="@+id/btComment"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/ic_add_circle_outline_48px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription1"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/tv_add_opinion"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/btComment"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription1"
+            tools:text="Añadir opinión" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="235dp">
+
+            <View style="@style/Divider" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="61dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                tools:visibility="gone"
+                android:layout_marginTop="100dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOpinions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:listitem="@layout/item_opinions"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

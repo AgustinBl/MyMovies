@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MoviesApiRetrofit</string>
+    <string name="content_descr_cover">cover</string>
+    <string name="tv_add_opinion">Añadir opinión</string>
+    <string name="tvName">Nombre</string>
+    <string name="tv_opinion">Comentario</string>
+</resources>
