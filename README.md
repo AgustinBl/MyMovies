@@ -7,7 +7,7 @@ Se trata de una plataforma simple de Películas con Opiniones
 
 Desarrollado con **kotlin**, en este proyecto se pueden apreciar las siguientes implementaciones:
 
-* RecyclerView & ViewHolder
+* RecyclerView
 * CardView
 * Alert Dialog
 * ApiService con Retrofit
